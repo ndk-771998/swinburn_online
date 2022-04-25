@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "projects": {
+    "demo": "apps/demo",
+    "demo-e2e": "apps/demo-e2e",
+    "main": "apps/main",
+    "main-e2e": "apps/main-e2e",
+    "webpress-block": "libs/webpress-block"
+  }
+}

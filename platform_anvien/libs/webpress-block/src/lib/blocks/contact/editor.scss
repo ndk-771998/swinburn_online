@@ -1,0 +1,20 @@
+.wp-block-webpress-contact {
+    margin-bottom: 40px;
+    margin-top: 60px;
+    .team__style,
+    input,
+    select,
+    textarea,
+    img {
+        margin-bottom: 20px;
+    }
+    .contact__counter {
+        display: flex;
+        margin: 0 -5px;
+        justify-content: center;
+        &__input {
+            padding: 0 5px;
+        }
+    }
+    &.style-1 {}
+}

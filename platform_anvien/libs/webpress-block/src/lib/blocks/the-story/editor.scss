@@ -1,0 +1,38 @@
+.wp-block-webpress-the-story {
+    border: 1px dotted #ddd;
+    padding: 2px;
+    input,
+    textarea {
+        margin-bottom: 10px;
+    }
+    h1{
+        text-align: center;
+    }    
+    .story {
+        .story__box__item {
+            padding: 10px;
+        }
+        .style-1{
+            .story__box__item__image{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .style-3{
+            .story__box__item__image{
+                img{
+                    width: 100%;
+                }
+            }
+            .story__box__item__desc {
+                textarea{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+.components-select-control__input{
+    line-height: 2 !important;
+}

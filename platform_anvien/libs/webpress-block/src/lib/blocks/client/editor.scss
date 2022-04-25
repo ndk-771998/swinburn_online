@@ -1,0 +1,34 @@
+.wp-block-webpress-client {
+    margin-bottom: 40px;
+    .team__style,
+    input,
+    select,
+    textarea,
+    img {
+        margin-bottom: 20px;
+    }
+    .block-editor-block-list__layout {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        .block-editor-block-list__block {
+            flex: 0 0 20%;
+            max-width: 20%;
+            padding: 0 10px;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &.style-1 {
+        img {
+            aspect-ratio: 1;
+        }
+    }
+    &.style-2 {
+        img {
+            aspect-ratio: 17/9;
+        }
+    }
+}

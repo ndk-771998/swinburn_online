@@ -1,0 +1,44 @@
+{
+  "root": "libs/webpress-block",
+  "sourceRoot": "libs/webpress-block/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/webpress-block",
+        "tsConfig": "libs/webpress-block/tsconfig.lib.json",
+        "project": "libs/webpress-block/package.json",
+        "entryFile": "libs/webpress-block/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/webpress-block/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "extractCss": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/webpress-block/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/webpress-block"],
+      "options": {
+        "jestConfig": "libs/webpress-block/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

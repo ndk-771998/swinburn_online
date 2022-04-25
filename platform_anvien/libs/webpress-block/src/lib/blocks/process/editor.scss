@@ -1,0 +1,45 @@
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+.wp-block-webpress-process {
+  border: 1px dotted #dddddd;
+  padding: 10px;
+  label,
+  input,
+  textarea {
+    margin-bottom: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .process__box {
+    @include e("item") {
+      margin-top: 20px;
+      margin: 20px 5px 10px 5px;
+      @include e("image") {
+        margin: 10px auto;
+        img {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .block-editor-inner-blocks {
+      .block-editor-block-list__layout {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

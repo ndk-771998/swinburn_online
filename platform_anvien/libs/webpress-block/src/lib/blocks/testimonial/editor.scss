@@ -1,0 +1,33 @@
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+.wp-block-webpress-testimonial {
+  border: 1px dotted #ddd;
+  padding: 2px;
+  .testimonial {
+    margin-bottom: 2rem;
+    @include e('item') {
+      @include e('image') {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @include e('message') {
+        padding: 0 25px;
+      }
+    }
+  }
+}

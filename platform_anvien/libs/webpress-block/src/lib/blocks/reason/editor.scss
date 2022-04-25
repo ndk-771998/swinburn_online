@@ -1,0 +1,23 @@
+.wp-block-webpress-reason {
+    margin-bottom: 40px;
+    .rtl{
+        direction: rtl;
+    }
+    .ltr{
+        direction: ltr;
+    }
+    .wp-block-webpress-reason-item{
+        padding: 10px;
+        .reasons__image{
+            img{
+                width: 100%;
+            }
+        }
+        .reason__box__item {
+            img{
+                width: 50%;
+                height: 100%;
+            }
+        }
+    }
+}

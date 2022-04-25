@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.wp-block-webpress-the-team {
+    margin-bottom: 40px;
+    .team__style,
+    input,
+    select,
+    textarea,
+    img {
+        margin-bottom: 20px;
+    }
+    .block-editor-block-list__layout {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+    .team {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 80px 20px 20px;
+        &.style-1 {
+            .block-editor-block-list__block {
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%;
+                padding: 0 10px;
+                .team__item {
+                    display: flex;
+                    flex-direction: column;
+                    &__content {
+                        order: 2;
+                        input {
+                            text-align: center;
+                        }
+                    }
+                    &__image {
+                        order: 1;
+                        text-align: center;
+                        position: relative;
+                        img {
+                            width: 260px;
+                            aspect-ratio: 1;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            border: 1px solid #ddd;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        &.style-2 {
+            .block-editor-block-list__block {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 0 10px;
+                .team__item {
+                    display: flex;
+                    margin: 0 -5px;
+                    &.content__swap {
+                        .team__item__content {
+                            order: 1;
+                        }
+                        .team__item__image {
+                            order: 2;
+                        }
+                    }
+                    &__content {
+                        padding: 0 5px;
+                    }
+                    &__image {
+                        width: 160px;
+                        padding: 0 5px;
+                        img {
+                            width: 150px;
+                            height: 150px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 1px solid #ddd;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

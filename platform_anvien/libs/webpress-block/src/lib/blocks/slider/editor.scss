@@ -1,0 +1,28 @@
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+.wp-block-webpress-slider {
+    border: 1px dotted #ddd;
+    padding: 2px;
+    .slide__box__item__image{
+        img{
+            width: 300px;
+            height: auto;
+        }
+    }
+    .slider__image{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

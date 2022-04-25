@@ -1,0 +1,60 @@
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+.wp-block-webpress-highlight {
+    padding: 10px;
+    margin-bottom: 40px;
+    input,
+    select,
+    textarea,
+    img {
+        margin-bottom: 20px;
+    }
+    h1, h2{
+        text-align: center;
+    }
+    .block-editor-block-list__layout {
+        display: flex;
+        flex-wrap: wrap;
+        .block-editor-block-list__block {
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+            padding: 0 10px;
+        }
+    }
+    .highlight__box {
+        @include e("item") {
+            @include e("image") {
+                text-align: center;
+                img {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+        }
+    }
+    .style-2{
+        .highlight__box__item__number{
+            text-align: center;
+            input{
+                width: 50%;
+                text-align: center;
+            }
+        }
+        .highlight__box__item__image{
+            img{
+                width: 50px !important;
+                height: 50px;
+            }
+        }
+    }
+}

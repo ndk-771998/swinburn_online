@@ -1,0 +1,21 @@
+.wp-block-webpress-header {
+    border: 1px dotted #ddd;
+    padding: 2px;
+    h1{
+      text-align: center;
+    }
+    input{
+      margin-bottom: 20px;
+    }
+    .header {
+        .header__logo{
+          text-align: center;
+          img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+      }
+  }
