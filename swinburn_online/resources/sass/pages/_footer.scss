@@ -1,0 +1,165 @@
+footer{
+    z-index: 1;
+    position: relative;
+    margin-top: 100px;
+    .up-footer{
+        height: 60px;
+        background-color: $color-text-up-menu;
+        .link-block{
+            .label{
+                margin: 19px 0;
+                height: 22px;
+                overflow: hidden;
+                p{
+                    font-size: $font_size_normal;
+                    font-family: $font_family_regular;
+                    color: $color-text-bottom-menu;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .links{
+                margin: 18px 0;
+                a{
+                    width: 14px;
+                    height: 14px;
+                    img{
+                        width: 14px;
+                        height: 14px;
+                        margin: 0 10px 0 0;
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+    .middle-footer{
+        background-color: $color-bg-menu;
+        .menu{
+            margin-top: 30px;
+            padding-right: 10px;
+            ul{
+                li{
+                    margin-bottom: 14px;
+                    a{
+                        line-height: 22px;
+                        font-size: $font_size_small;
+                        color: $color-text-up-menu;
+                        font-family: $font_family_regular;
+                        display: inherit;
+                        transition: all 1s ease;
+                        &:hover{
+                            color: $color-text-up-menu-hover;
+                        }
+                    }
+                }
+            }
+        }
+        .logo{
+            margin: 94px 0 104px 0;
+        }
+        .contact{
+            margin: 102px 0 112px 0;
+            text-align: right;
+        }
+        .information{
+            font-size: $font_size_small;
+            color: $color-text-up-menu;
+            font-family: $font_family_regular;
+            margin-top: 30px;
+            p{
+                margin-bottom: 14px;
+                line-height: 22px;
+                display: inherit;
+            }
+        }
+    }
+    .bottom-footer{
+        background-color: $color-bg-menu;
+        .bottom_nav{
+            border-top: 2px solid #707070;
+            font-size: $font_size_small;
+            font-family: $font_family_italic;
+            color: $color-border;
+            padding-top: 14px;
+            padding-bottom: 30px;
+            a{
+                text-decoration: underline;
+                margin-right: 30px;
+                font-size: $font_size_small;
+                font-family: $font_family_italic;
+                color: $color-border;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer .middle-footer .logo {
+        margin: 15px 0 !important;
+        text-align: center;
+    }
+    footer .middle-footer .contact {
+        margin: 15px 0 !important;
+        text-align: center !important;
+    }
+    footer .bottom-footer .bottom_nav a {
+        text-decoration: underline;
+        margin-right: 30px;
+        font-size: 14px;
+        font-family: OpenSans-Italic;
+        color: #cccccc;
+        display: inherit;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    footer .middle-footer .information {
+        font-size: 16px;
+        color: #ffffff;
+        font-family: OpenSans-Regular;
+        margin-top: 30px;
+        text-align: center;
+    }
+    footer .middle-footer .logo {
+        margin: 30px 0;
+    }
+    footer .middle-footer .contact {
+        margin: 39px 0;
+        text-align: right;
+        padding: 0;
+    }
+    footer .bottom-footer {
+        display: flex;
+        flex-direction: column;
+        padding: 14px 0 30px 0;
+        border-top: 1px solid #707070;
+        font-size: 14px;
+        font-family: OpenSans-Italic;
+        color: #cccccc;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+    footer .up-footer .link-block .links a img {
+        width: 24px;
+        height: 24px;
+        margin: 0 14px 0 0;
+        transform: translateY(-2px);
+    }
+    
+    footer .middle-footer .menu {
+        display: none;
+    }
+    footer .up-footer .link-block .label {
+        display: none;
+    }
+    footer .up-footer .link-block{
+        display: flex;
+        justify-content: center;
+    }
+    footer .up-footer .link-block .links {
+        margin-left: 0;
+    }
+}

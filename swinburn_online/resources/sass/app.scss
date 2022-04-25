@@ -1,0 +1,94 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "./ui/color";
+@import "./ui/font";
+@import "./ui/button";
+@import "./mixins/text.scss";
+@import "./include/course-category.scss";
+@import "./include/blog.scss";
+@import "./include/banner.scss";
+@import "./include/breadcump.scss";
+@import "./include/event.scss";
+@import "./include/course-icons.scss";
+@import "./include/course-popup.scss";
+@import "./include/course-register.scss";
+@import "./include/video-popup.scss";
+@import "./include/journey/text-container-background-image-section.scss";
+@import "./include/journey/text-right-image-left-section.scss";
+@import "./include/journey/text-left-image-right-section.scss";
+@import "./include/journey/slide-section.scss";
+@import "./include/journey/background-image-with-video.scss";
+@import "./include/journey/text-container-right-background-image-section.scss";
+@import "./pages/header";
+@import "./pages/footer";
+@import "./pages/index";
+@import "./pages/event-list";
+@import "./pages/event-detail";
+@import "./pages/blog-list";
+@import "./pages/blog-detail";
+@import "./pages/questions";
+@import "./pages/courses-detail";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/apply";
+@import "./pages/journey";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg, 
+    .container-xl {
+        max-width: 1200px;
+    }
+}
+
+body {
+    background-color: $color-bg-block;
+    padding-top: 120px;
+    a:hover{
+        text-decoration: none;
+    }
+}
+
+table {
+    border-collapse: separate !important;
+    td {
+        vertical-align: top;
+        height: fit-content;
+    }
+    
+    table tr:last-child td p {
+        margin-bottom: 0;
+    }
+}
+                
+@media (max-width: 768px) {
+    .content>table {
+        max-width: 100% !important;
+        margin: 0 !important;
+        display: block;
+        height: unset !important;
+        >tbody {
+            display: block;
+            height: unset !important;
+            >tr {
+                display: block;
+                width: 100%;
+                height: unset !important;
+
+                >td {
+                    display: block;
+                    width: 100% !important;
+                    height: unset !important;
+                }
+            }
+        }
+    }
+}

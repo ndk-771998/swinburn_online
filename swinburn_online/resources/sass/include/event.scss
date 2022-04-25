@@ -1,0 +1,74 @@
+    .event-list {
+        margin-bottom: 50px;
+        .event-list-title{
+            margin-bottom: 30px;
+        }
+        .event-item {
+            .event-item-wrap {
+                padding: 10px;
+                background: $color-event-bg;
+                margin-bottom: 20px;
+                border-radius: 4px;
+            }
+    
+            .thumbnail {
+                margin-bottom: 10px;
+                position: relative;
+    
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    aspect-ratio: 5/4;
+                }
+    
+                .date {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    height: 75px;
+                    width: 75px;
+                    background: $color-btn-banner-danger;
+                    color: $color-text-up-menu;
+                    font-family: $font_family_semibold;
+                    font-size: $font_size_normal;
+                    border-radius: 1px;
+                    text-align: center;
+                    .value {                
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            .title {
+                font-family: $font_family_bold;
+                font-size: $font_size_normal;
+                height: 88px;
+                line-height: normal;
+                @include limitRowToDisplay(4);
+                margin-bottom: 8px;
+                a {
+                    color: $color-bg-menu;
+                    transition: 0.3s all ease;
+                    &:hover{
+                       color: $color-btn-banner-danger;
+                    }
+                }
+            }
+    
+            .read-more {
+                font-family: $font_family_semibold;
+                font-size: $font_size_normal;
+                text-decoration: underline;
+                transition: 0.3s all ease;
+                a {
+                    color: $color-text-bottom-menu;
+                    &:hover{
+                        transition: 0.3s all ease;
+                        color: $color-btn-banner-danger;
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,43 @@
+.background-image-with-video {
+    .image-container {
+        width: 100%;
+        aspect-ratio: 499/300;
+        min-height: 480px;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+        
+        .play-button {
+            position: absolute;
+            left: 25px;
+            bottom: 25px;
+            padding: 30.5px;
+            background-color: $color-btn-banner-danger;
+            cursor: pointer;
+            
+            img {
+                display: block;
+                width: 14px;
+                height: 14px;
+            }
+        
+            &:hover {
+                background-color: $color-bg-button;
+            }
+        }
+    }
+
+    .text-container {
+        background: $color-text-up-menu;
+        padding-top: 30px;
+        padding-left: 19%;
+        padding-right: 19%;   
+        @media (max-width: 768px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        p{
+            text-align: center;
+        }
+    }
+}

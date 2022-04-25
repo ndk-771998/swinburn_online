@@ -1,0 +1,105 @@
+.contact-us-container {
+    background: $color-text-up-menu;
+    padding-bottom: 51px;
+    .contact-us-wrap {
+        margin-top: 20px;
+
+        h2 {
+            font-family: $font_family_regular;
+            font-size: $font_size_extra_smaller;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: $font_family_regular;
+            font-size: $font_size_normal;
+            margin-bottom: 10px;
+        }
+    
+        ul {
+            margin-left: 33px;
+        }
+
+        ul ul {
+            margin-left: 15px;
+            list-style: "-  ";
+        }
+
+        ul ul ul {
+            margin-left: 15px;
+            list-style: "+  ";
+        }
+
+        ul li {
+            font-family: $font_family_regular;
+            font-size: $font_size_normal;
+            margin-bottom: 9px;
+        }
+    }
+
+    .contact-us-left-form {
+        padding-right: 15%;
+        legend {
+            display: none;
+        }
+
+        form {
+            align-items: flex-end;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            label {
+                font-family: $font_family_regular;
+                font-size: $font_size_small;
+                margin-bottom: 15px;
+            }
+
+            select, input, textarea {
+                padding: 11px 11px;
+                margin-bottom: 0;
+                border: none;
+                border-radius: 0;
+                background: $color-event-bg;
+                color: $color-bg-menu;
+
+                &::placeholder {
+                    color: inherit;
+                }
+            }
+
+            select, input {
+                height: 44px;
+            }
+
+            .form-group {
+                margin-bottom: 13px;
+            }
+
+            button {
+                background: $color-btn-banner-danger;
+                padding: 11px 15px;
+                border: none;
+                border-radius: 2px;
+                margin-top: 33px;
+            }
+        }
+
+        .error {
+            color: $color-btn-banner-danger;
+            list-style: none;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .contact-us-right-content {
+        .content {
+            margin-bottom: 50px;
+            padding: 30px 30px 14px;
+            background: $color-event-bg;
+            color: $color-bg-menu;
+            border-radius: 2px;
+        }
+    }
+}

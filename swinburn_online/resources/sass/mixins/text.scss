@@ -1,0 +1,8 @@
+@mixin limitRowToDisplay($row) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

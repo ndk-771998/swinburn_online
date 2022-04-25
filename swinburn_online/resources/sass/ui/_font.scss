@@ -1,0 +1,42 @@
+@font-face{
+    font-family: OpenSans-Regular;
+    src: url("../../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: OpenSans-Italic;
+    src: url("../../fonts/OpenSans-Italic.ttf");
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url("../../fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: OpenSans-SemiBold;
+    src: url("../../fonts/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: OpenSans-Light;
+    src: url("../../fonts/OpenSans-Light.ttf");
+}
+
+// font-family
+$font_family_light: OpenSans-Light;
+$font_family_regular: OpenSans-Regular;
+$font_family_italic: OpenSans-Italic;
+$font_family_bold: OpenSans-Bold;
+$font_family_semibold: OpenSans-SemiBold;
+
+// font-size
+$font_size_smaller: 12px;
+$font_size_small: 14px;
+$font_size_normal: 16px;
+$font_size_large: 20px;
+$font_size_larger: 22px;
+$font_size_extra_smaller: 30px;
+$font_size_extra_small: 40px;
+$font_size_extra_normal: 48px;
+$font_size_extra_large: 60px;
+$font_size_extra_larger: 70px;

@@ -1,0 +1,44 @@
+.slide-section {
+    .slide-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        img {
+            object-fit: fill;
+        }
+
+        .slick-prev {
+            transform: translateY(-50%) rotate(-180deg);
+            left: 15px;
+            @media (min-width: 1366px) {
+                left: 90px;
+            }
+        }
+
+        .slick-next {
+            right: 15px;
+            @media (min-width: 1366px) {
+                right: 90px;    
+            }
+        }
+
+        .image-item {
+            img{
+                width: 326px;
+                height: 450px;
+                padding: 0 25px;
+            }
+        }
+    }
+
+    .text-container {
+        background: $color-text-up-menu;
+        padding-top: 30px;
+        padding: 0 19%; 
+        p{
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) { 
+            padding: 0 10%; 
+        } 
+    }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+    <defs>
+        <clipPath id="clip-path">
+            <rect id="Two-business-people-looking-at-tablet" width="14" height="14" rx="2" transform="translate(0 .081)" style="stroke:#707070;fill:none"/>
+        </clipPath>
+        <style>
+            .cls-3{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.902px}
+        </style>
+    </defs>
+    <g id="Mask_Group_6" data-name="Mask Group 6" transform="translate(0 -.081)" style="clip-path:url(#clip-path)">
+        <g id="_16665695451543238858" data-name="16665695451543239000" transform="translate(1.145 1.15)">
+            <path fill="#da2e2e" id="Line_2" data-name="Line 2" class="cls-3" transform="translate(0 5.666)" d="M0 0h11.332"/>
+            <path fill="#da2e2e" id="Path_13" data-name="Path 13" class="cls-3" d="m11.409 4.754 5.666 5.666-5.666 5.666" transform="translate(-5.743 -4.754)"/>
+        </g>
+    </g>
+</svg>

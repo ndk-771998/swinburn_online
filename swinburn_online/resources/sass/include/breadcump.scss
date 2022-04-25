@@ -1,0 +1,24 @@
+.breadcrumb {
+    padding-top: 15px;
+    background: transparent;
+    margin-bottom: 0;
+    a {
+        font-family: $font_family_regular;
+        color: $color-title;
+        font-size: $font_size_smaller;
+        display: inline-block;
+
+        &.current-page {
+            font-family: $font_family_semibold;
+        }
+    }
+
+    img {
+        display: inline-block;
+        filter: brightness(0);
+    }
+
+    p {
+        margin-bottom: 0px;
+    }
+}

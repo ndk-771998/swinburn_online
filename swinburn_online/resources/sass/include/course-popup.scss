@@ -1,0 +1,98 @@
+.course-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 10;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      border: 10px solid transparent;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent; 
+      margin: 20px 5px;
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgb(167, 167, 167); 
+      border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgb(207, 207, 207); 
+    }
+
+    .course-popup-wrap {
+        background: white;
+        padding: 50px 25px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        position: relative;
+
+        .header {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid $color-btn-banner-danger-hover;
+
+            h2 {
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        .body { 
+            padding-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            h3 {
+                margin-top: 10px;
+                margin-bottom: 15px !important;
+            }
+
+            p {
+                margin-bottom: 10px !important;
+            }
+
+            ul li {
+                margin-bottom: 10px !important;
+            }
+        }
+
+        .more-information {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 30px;
+            a {
+                color: $color-title;
+                font-size: $font_size_large;
+                font-family: $font_family_semibold;
+
+                img {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+    <defs>
+        <clipPath id="a">
+            <path data-name="Rectangle 6" transform="translate(654 73)" style="stroke:#707070;fill:#da2e2e" d="M0 0h10v10H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Mask Group 3" transform="rotate(-90 295.5 368.5)" style="clip-path:url(#a)">
+        <g data-name="-Round-/-Navigation-/-arrow_back_ios">
+            <g data-name="Group 1">
+                <path d="M0 0h10v10H0z" style="fill-rule:evenodd;fill:none;opacity:.87" transform="translate(654 73)"/>
+                <path data-name="🔹-Icon-Color" d="M6.4 1.027a.521.521 0 0 0-.738 0L2.2 4.49a.415.415 0 0 0 0 .587L5.667 8.54A.521.521 0 0 0 6.4 7.8L3.388 4.781l3.021-3.02a.519.519 0 0 0-.009-.734z" transform="translate(654.521 73.219)" style="fill-rule:evenodd;fill:#da2e2e"/>
+            </g>
+        </g>
+    </g>
+</svg>

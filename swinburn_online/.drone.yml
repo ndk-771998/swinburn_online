@@ -1,0 +1,111 @@
+---
+kind: pipeline
+type: docker
+name: default
+globals:
+  - &docker_creds
+    username:
+      from_secret: docker_user
+    password:
+      from_secret: docker_password
+steps:
+  - name: prepare
+    image: busybox
+    commands:
+      - mkdir -p /cache/${DRONE_REPO}/docker
+    volumes:
+      - name: cache
+        path: /cache
+  - name: Setup Domain
+    image: nightfuryest/drone-plugin-webpress-dns
+    settings:
+      domain: swinburneonline
+      target: sv1devapp.webpress.vn
+      cloudflare_email:
+        from_secret: CLOUDFLARE_EMAIL
+      cloudflare_token:
+        from_secret: CLOUDFLARE_TOKEN
+      cloudflare_zone_id:
+        from_secret: CLOUDFLARE_ZONE_ID
+  - name: env:staging
+    image: nightfuryest/drone-plugin-secret-to-env
+    settings:
+      template: .deploy/.env.staging.template
+      file: .env
+      envs:
+        - DB_USERNAME
+        - DB_PASSWORD
+      DB_USERNAME:
+        from_secret: DEFAULT_DB_ROOT_USER_DEV
+      DB_PASSWORD:
+        from_secret: DEFAULT_DB_ROOT_PASSWORD_DEV
+    when:
+      branch:
+        - staging/*
+  - name: env:prod
+    image: nightfuryest/drone-plugin-secret-to-env
+    settings:
+      template: .deploy/.env.prod.template
+      file: .env
+      envs:
+        - DB_USERNAME
+        - DB_PASSWORD
+      DB_USERNAME:
+        from_secret: DEFAULT_DB_ROOT_USER_DEV
+      DB_PASSWORD:
+        from_secret: DEFAULT_DB_ROOT_PASSWORD_DEV
+    when:
+      branch:
+        - release/*
+  - name: Install PHP Packages
+    image: nightfuryest/php-composer
+    commands:
+      - composer install
+    environment:
+      COMPOSER_CACHE_DIR: /composer
+    volumes:
+      - name: composer
+        path: /composer
+  - name: Build assets
+    image: node:13-alpine
+    commands:
+      - node -v
+      - npm -v
+      - yarn --version
+      - yarn config set cache-folder /yarn
+      - yarn install --pure-lockfile
+      - yarn prod
+    volumes:
+      - name: yarn
+        path: /yarn
+  - name: compress
+    image: kramos/alpine-zip
+    commands:
+      - rm -rf node_modules
+      - rm -rf .git
+      - zip -r workspace.zip * .* -x "node_modules/*" ".git/*"
+  - name: deploy
+    image: nightfuryest/drone-plugin-webpress-manager
+    settings:
+      domain: swinburneonline
+      server_url: http://sv1devapp.webpress.vn
+      server_port: 30001
+      run_post_install_script: false
+volumes:
+  - name: cache
+    host:
+      path: /var/cache
+  - name: docker
+    host:
+      path: /var/cache/${DRONE_REPO}/docker
+  - name: composer
+    host:
+      path: /var/cache/${DRONE_REPO}/composer
+  - name: yarn
+    host:
+      path: /var/cache/${DRONE_REPO}/yarn
+
+trigger:
+  branch:
+    - staging/*
+    - release/*

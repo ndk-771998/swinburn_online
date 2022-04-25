@@ -1,0 +1,38 @@
+.video-popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.video-popup-container .video-popup-wrap {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.video-popup-container .video-popup-wrap .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.video-popup-container .video-popup-wrap iframe {
+  max-width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border: white 5px solid;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=video-popup.css.map */

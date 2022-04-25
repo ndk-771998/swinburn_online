@@ -1,0 +1,37 @@
+.event-detail-container {
+    background: $color-text-up-menu;
+    margin-bottom: 100px;
+    .event-detail-wrap {
+        font-family: $font-family-regular;
+        color: $color-bg-menu;
+        padding-bottom: 0.1px;
+        margin-top: 20px;
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .content {
+            font-size: 16px;
+            margin-bottom: 70px;
+            p {
+                margin-bottom: 15px;
+                font-size: 16px;
+                line-height: normal !important;
+                span {
+                    strong {
+                        font-family: $font-family-bold;
+                    }
+                }
+            }
+        }
+
+        .facebook-plugin {
+            font-size: $font_size_small;
+            margin-bottom: 142px;
+            .signin {
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+    }
+}
